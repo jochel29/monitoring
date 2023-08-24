@@ -1,0 +1,20 @@
+body{
+    background-image: url("lib.png");  background-repeat: no-repeat; background-position: center; background-attachment:auto; background-size:auto;
+    text-align: center;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+}
+h1{
+    font-size: 50px;
+    color: white;
+    font-style: italic;
+}
+table{
+    text-align: right;
+}
+#page{
+    margin: 300px;
+    size-adjust: 100px;
+}
