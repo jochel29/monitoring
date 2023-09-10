@@ -11,12 +11,12 @@
 			while($row = mysqli_fetch_assoc($result)){
 				$i = $i + 1;
 				echo "<tr>
-				<td>".$i."</td>
-				td>".$row ['log_lib_id']."</td>
-			   <td>".$row ['name']."</td>
-			   <td>".$row ['departmentORcurriculum']."</td>  
-			   <td>".$row ['time_in']."</td>
-			   <td>".$row ['time_out']."</td></tr>";
+				<td class='p-3 border border-solid'>".$i."</td>
+				<td class='p-3 border border-solid'>".$row ['log_lib_id']."</td>
+			   <td class='p-3 border border-solid'>".$row ['name']."</td>
+			   <td class='p-3 border border-solid'>".$row ['departmentORcurriculum']."</td>  
+			   <td class='p-3 border border-solid'>".$row ['time_in']."</td>
+			   <td class='p-3 border border-solid'>".$row ['time_out']."</td></tr>";
 			};
 		};
 
@@ -27,12 +27,12 @@
 			while($row = mysqli_fetch_assoc($result)){
 				$i = $i + 1;
 				echo "<tr>
-				<td>".$i."</td>
-			   <td>".$row ['log_lib_id']."</td>
-			   <td>".$row ['name']."</td>
-			   <td>".$row ['departmentORcurriculum']."</td>  
-			   <td>".$row ['time_in']."</td>
-			   <td>".$row ['time_out']."</td></tr>";
+				<td class='p-3 border border-solid'>".$i."</td>
+			   <td class='p-3 border border-solid'>".$row ['log_lib_id']."</td>
+			   <td class='p-3 border border-solid'>".$row ['name']."</td>
+			   <td class='p-3 border border-solid'>".$row ['departmentORcurriculum']."</td>  
+			   <td class='p-3 border border-solid'>".$row ['time_in']."</td>
+			   <td class='p-3 border border-solid'>".$row ['time_out']."</td></tr>";
 			};
 		};
 	};

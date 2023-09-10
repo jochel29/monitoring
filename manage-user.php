@@ -3,6 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://cdn.tailwindcss.com"></script>
 	<title>Library Monitoring | Add User</title>
 </head>
 <body>
@@ -14,14 +15,14 @@
 	 ?>
 		
 
-		<div>
-			<table>
+		<div class="w-full p-3 mt-5">
+			<table class="w-full border-collapse border border-solid">
 				<tr>
-					<th>Library ID</th>
-					<th>Name</th>
-					<th>Department/Curriculum</th>
-					<th>User Type</th>
-					<th>Action</th>
+					<th class="p-3 border border-solid">Library ID</th>
+					<th class="p-3 border border-solid">Name</th>
+					<th class="p-3 border border-solid">Department/Curriculum</th>
+					<th class="p-3 border border-solid">User Type</th>
+					<th class="p-3 border border-solid">Action</th>
 				</tr>
 				<?php 
 					// include 'partial/db.php';
@@ -31,13 +32,13 @@
 						while($row = mysqli_fetch_assoc($lib_userdata)){
 				?>
 				<tr>
-					<td><?php echo $row['lib_ID']; ?></td>
-					<td><?php echo $row['name']; ?></td>
-					<td><?php echo $row['departmentORcurriculum']; ?></td>
-					<td><?php echo $row['user_type']; ?></td>
-					<td>	
-						<button><a href="add-user.php?lib_ID=<?php echo $row['lib_ID']; ?>&name=<?php echo $row['name'] ?>&deptCurr=<?php echo $row['departmentORcurriculum'] ?>&userType=<?php echo $row['user_type'] ?>">Edit</a></button>
-						<button><a href="functions/actions.php?lib_ID=<?php echo $row['lib_ID']; ?>">Delete</a></button>
+					<td class="p-3 border border-solid"><?php echo $row['lib_ID']; ?></td>
+					<td class="p-3 border border-solid"><?php echo $row['name']; ?></td>
+					<td class="p-3 border border-solid"><?php echo $row['departmentORcurriculum']; ?></td>
+					<td class="p-3 border border-solid"><?php echo $row['user_type']; ?></td>
+					<td class="p-3 flex justify-around border border-solid">	
+						<button><a class="hover:underline" href="add-user.php?lib_ID=<?php echo $row['lib_ID']; ?>&name=<?php echo $row['name'] ?>&deptCurr=<?php echo $row['departmentORcurriculum'] ?>&userType=<?php echo $row['user_type'] ?>">Edit</a></button>
+						<button><a class="hover:underline" href="functions/actions.php?lib_ID=<?php echo $row['lib_ID']; ?>">Delete</a></button>
 					</td>
 				</tr>
 				<?php 

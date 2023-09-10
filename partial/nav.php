@@ -7,16 +7,19 @@
 	};
  ?>
 <!-- this is where you code your structure for navigation -->
-<div>
-	<ul>
-		<li>DASHBOARD</li>
-		<li><a href="add-user.php">ADD LIBRARY USER</a></li>
-		<li><a href="view-log.php">VIEW LOGIN LOG</a></li>
-		<li><a href="manage-user.php">MANAGE ACCOUNTS</a></li>
+<div class="w-full p-5 flex justify-between items-center bg-gray-200">
+	<div>
+		<img class="h-12" src="./partial/logo.png" alt="">
+	</div>
+	<ul class="flex gap-4">
+		<li><a class="hover:underline" href="index.php">DASHBOARD</a></li>
+		<li><a class="hover:underline" href="add-user.php">ADD LIBRARY USER</a></li>
+		<li><a class="hover:underline" href="view-log.php">VIEW LOGIN LOG</a></li>
+		<li><a class="hover:underline" href="manage-user.php">MANAGE ACCOUNTS</a></li>
 		<li>
 			<!-- this form logout the user session in the logout.php -->
 			<form action="functions/logout.php" method="POST">
-				<input type="submit" name="logout" value="Logout">
+				<input class="hover:underline" type="submit" name="logout" value="LOGOUT">
 			</form>
 		</li>
 	</ul>
