@@ -7,9 +7,9 @@
 	<title>Library Monitoring</title>
 </head>
 <body>
-	<div class="h-screen w-screen flex items-center justify-center">
+	<div class="h-screen w-screen bg-[url(./bg11.jpg)] bg-cover flex items-center justify-center">
 		<!-- this where you code your login page -->	
-		<div class="w-[500px] border border-solid p-10 rounded rounded-xl bg-sky-300/50 ">
+		<div class="w-[500px] border border-solid p-10 rounded rounded-xl bg-sky-300/90 ">
 			<form class="w-full flex flex-col gap-5 items-center justify-center" action="functions/verify.php" method="POST">
 				<p class="font-bold text-2xl">Log In</p>
 				<input class="w-full border border-solid p-5 rounded rounded-full" placeholder="Username" type="text" name="username" required>
