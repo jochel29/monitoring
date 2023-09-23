@@ -15,7 +15,7 @@
 				<input class="w-full border border-solid p-5 rounded rounded-full" placeholder="Username" type="text" name="username" required>
 				<input class="w-full border border-solid p-5 rounded rounded-full" placeholder="Password" type="password" name="password" required>
 				<input class="w-full border border-solid p-5 rounded rounded-full bg-gray-300 hover:bg-gray-400" type="submit" value="Submit" name="login">
-				<a href="./register.php" class="hover:underline">Register</a>
+				
 			</form>
 		</div>	
 	</div>

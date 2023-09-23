@@ -8,11 +8,12 @@
  ?>
 <!-- this is where you code your structure for navigation -->
 <div class="w-full p-5 flex justify-between items-center bg-gray-200">
-	<div>
+	<div class="flex gap-3 items-center">
 		<img class="h-12" src="./partial/logo.png" alt="">
+		<p>Library Monitoring System</p>
 	</div>
 	<ul class="flex gap-4">
-		<li><a class="hover:underline" href="index.php">DASHBOARD</a></li>
+		<!-- <li><a class="hover:underline" href="index.php">DASHBOARD</a></li> -->
 		<li><a class="hover:underline" href="add-user.php">ADD LIBRARY USER</a></li>
 		<li><a class="hover:underline" href="view-log.php">VIEW LOGIN LOG</a></li>
 		<li><a class="hover:underline" href="manage-user.php">MANAGE ACCOUNTS</a></li>
