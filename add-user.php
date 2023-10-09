@@ -140,7 +140,7 @@
     var selectBox = document.getElementById("selectbox");
 
     option1.addEventListener("change", function() {
-      selectBox.innerHTML = '<option value="BSIS">BSIS</option><option value="BSINFOTECH">BSINFOTECH</option><option value="BSED">BSED</option><option value="BEED">BEED</option><option value="BTVTED">BTVTED</option><option value="BSHM">BSHM</option><option value="BSIT">BSIT</option>';
+      selectBox.innerHTML = '<option value="BSIS">Bachelor of Science in Information Systems</option><option value="BSINFOTECH">Bachelor of Science in Information Technology</option><option value="BSED">Bachelor of Secondary Education</option><option value="BEED">Bachelor of Elementary Education</option><option value="BTVTED">Bachelor in Technical Vocational Teacher Education</option><option value="BSHM">Bachelor of Science in Hospitality Management</option><option value="BSIT">Bachelor of Science in Industrial Technology</option>';
     });
 
     option2.addEventListener("change", function() {
