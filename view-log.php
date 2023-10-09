@@ -58,7 +58,41 @@
 	<!-- button below has a onclick attribute that call the print div function in the JS script below -->
 	
 	<div class="w-full p-5" id="printTable">
-		<script src="https://cdn.tailwindcss.com"></script>		  
+		<script src="https://cdn.tailwindcss.com"></script>
+		<!-- <div class="flex flex-wrap justify-center items-center  gap-3 mb-5">
+			<div class="flex flex-col h-[150px] w-[150px] gap-3 justify-center items-center p-3 border border-solid border-black">
+				<div class="font-bold text-lg">BS INFOTECH</div>
+				<div class="font-bold text-3xl">0</div>
+			</div>
+			<div class="flex flex-col h-[150px] w-[150px] gap-3 justify-center items-center p-3 border border-solid border-black">
+				<div class="font-bold text-lg">BSIS</div>
+				<div class="font-bold text-3xl">0</div>
+			</div>
+			<div class="flex flex-col h-[150px] w-[150px] gap-3 justify-center items-center p-3 border border-solid border-black">
+				<div class="font-bold text-lg">BSHM</div>
+				<div class="font-bold text-3xl">0</div>
+			</div>
+			<div class="flex flex-col h-[150px] w-[150px] gap-3 justify-center items-center p-3 border border-solid border-black">
+				<div class="font-bold text-lg">BEED</div>
+				<div class="font-bold text-3xl">0</div>
+			</div>
+			<div class="flex flex-col h-[150px] w-[150px] gap-3 justify-center items-center p-3 border border-solid border-black">
+				<div class="font-bold text-lg">BSED</div>
+				<div class="font-bold text-3xl">0</div>
+			</div>
+			<div class="flex flex-col h-[150px] w-[150px] gap-3 justify-center items-center p-3 border border-solid border-black">
+				<div class="font-bold text-lg">BTVTED</div>
+				<div class="font-bold text-3xl">0</div>
+			</div>
+			<div class="flex flex-col h-[150px] w-[150px] gap-3 justify-center items-center p-3 border border-solid border-black">
+				<div class="font-bold text-lg">BSIT</div>
+				<div class="font-bold text-3xl">0</div>
+			</div>
+		</div>		   -->
+		<div class="flex mb-5 gap-3 items-center">
+			<p class="font-bold text-2xl">Total Users: </p>
+			<p class="font-bold text-2xl" id="count">0</p>
+		</div>
 		<table class="w-full border-collapse border border-solid">
 			<tr>
 				<th class="p-3 border border-solid">No.</th>
@@ -72,6 +106,64 @@
 			<?php include 'functions/filter.php' ?>
 			
 		</table>
+		<?php
+			echo "<script> var data = '$json_data';</script>";
+		?>
+		<script>
+			const countDiv = document.getElementById('count');
+			// counting function
+			function countUsersPerMonth(datas) {
+				const userCounts = {};
+				// console.log(datas)
+				for(let entry of datas) {
+					const logLibId = entry.log_lib_id;
+					const dateSeperate = entry.time_in;
+					// console.log(entry, dateSeperate)
+					if(dateSeperate){
+						let split = dateSeperate.split(' ')
+						const loginDate = new Date(dateSeperate);
+						// console.log(loginDate)
+						const year = loginDate.getFullYear();
+						const month = loginDate.getMonth() + 1; // Months are 0-indexed, so add 1 to get the correct month.
+
+						// Create a unique key for each month and user combination.
+						const key = `${year}-${month}-${logLibId}`;
+
+						// If the key doesn't exist, increment the user count.
+						if (!userCounts[key]) {
+						userCounts[key] = 1;
+						} else {
+						// If the key exists, it means the user has already logged in during this month.
+						// So, we don't increment the count again to ensure each user is counted only once per month.
+						}
+					}
+					
+				};
+				console.log(userCounts)
+				return userCounts;
+			}
+
+			
+			let userCounts;
+			userCounts = countUsersPerMonth(JSON.parse(data))
+			
+			// Display user counts per month
+			let count = 0;
+			for (const key in userCounts) {
+				if (userCounts.hasOwnProperty(key)) {
+					const [year, month, logLibId] = key.split('-');
+					
+					// console.log(`Month: ${month}/${year}, Users Count: ${userCounts[key]}`);
+					count = count + userCounts[key];
+				}
+			}
+			console.log(count)
+			countDiv.innerHTML = count
+
+			
+
+			
+		</script>
 	</div>
 	
 
