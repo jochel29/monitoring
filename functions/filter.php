@@ -5,7 +5,12 @@
 		$dateTo = $_POST['dateTo'];
 		$departmentORcurriculum = $_POST['departmentORcurriculum'];
 		// echo $dateFrom. $dateTo. $departmentORcurriculum;
-		$query = "SELECT * FROM log WHERE departmentORcurriculum = '".$departmentORcurriculum."' AND time_in BETWEEN '".$dateFrom."' and '".$dateTo."' ";
+		if($dateFrom && $dateTo){
+			$query = "SELECT * FROM log WHERE departmentORcurriculum = '".$departmentORcurriculum."' AND time_in BETWEEN '".$dateFrom."' and '".$dateTo."' ";
+		}else{
+			$query = "SELECT * FROM log WHERE departmentORcurriculum = '".$departmentORcurriculum."'";
+		}
+		
 		$result = mysqli_query($conn, $query);
 		if(mysqli_num_rows($result)>0){
 			$data=array();
