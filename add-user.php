@@ -36,7 +36,7 @@
 			';
 				if($userType == "Student" || $userType == "student"){
 					echo '
-						<select class="w-full border border-solid p-5 rounded rounded-full" name="departmentORcurriculum" id="selectbox">
+						<select class="w-full border border-solid p-5 rounded rounded-full" name="departmentORcurriculum" style="-webkit-appearance: none;" id="selectbox">
 							<option '.(($deptCurr == "BSIS")? 'selected':'').' value="BSIS">Bachelor of Science in Information Systems</option>
 							<option '.(($deptCurr == "BSINFOTECH")? 'selected':'').' value="BSINFOTECH">Bachelor of Science in Information Technology</option>
 							<option '.(($deptCurr == "BSED")? 'selected':'').' value="BSED">Bachelor of Secondary Education</option> 
@@ -64,7 +64,7 @@
 					';
 				}else{
 					echo '
-						<select class="w-full border border-solid p-5 rounded rounded-full" name="departmentORcurriculum" id="selectbox">
+						<select class="w-full border border-solid p-5 rounded rounded-full" name="departmentORcurriculum" style="-webkit-appearance: none;" id="selectbox">
 							<option '.(($deptCurr == "SOICT")? 'selected':'').' value="SOICT">School of Information and Communications Technology</option>
 							<option '.(($deptCurr == "SOIT")? 'selected':'').' value="SOIT">School of Industrial Technology</option>
 							<option '.(($deptCurr == "SOED")? 'selected':'').' value="SOED">School of Education </option>
@@ -92,7 +92,7 @@
 					<h1 class="font-bold text-2xl text-center">Add User</h1>
 				<input class="w-full border border-solid p-5 rounded rounded-full" placeholder="Library ID" type="text" name="lib_ID" required>
 				<input class="w-full border border-solid p-5 rounded rounded-full" placeholder="Name" type="text" name="name" required>
-				<select class="w-full border border-solid p-5 rounded rounded-full" name="departmentORcurriculum" id="selectbox">
+				<select class="w-full border border-solid p-5 rounded rounded-full" name="departmentORcurriculum" style="-webkit-appearance: none;" id="selectbox">
 					<option value="BSIS">Bachelor of Science in Information Systems</option>
 					<option value="BSINFOTECH">Bachelor of Science in Information Technology</option>
 					<option value="BSED">Bachelor of Secondary Education</option> 
