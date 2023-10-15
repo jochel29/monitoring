@@ -27,7 +27,7 @@ while True:
 				updateVal = (now.strftime("%Y-%m-%d %H:%M:%S"), str(log))
 				mycursor.execute(updateQuery, updateVal)
 				mydb.commit()
-				print("logout")
+				print(x[2], "Logout Succesfully")
 				logout = False
 			else:
 				logout = True
@@ -46,7 +46,7 @@ while True:
 					val = (str(log), now.strftime("%Y-%m-%d %H:%M:%S"),x[2],x[3],'')
 					mycursor.execute(query, val)
 					mydb.commit()
-					print("login")
+					print(x[2], "Login Succesfully")
 				else:
 					print("Barcode not Register 2")
 		
