@@ -6,14 +6,15 @@
 		header('location:../add-user.php');
 	};
 	if(isset($_POST['updateUser'])){
+		$id = $_POST['id'];
 		$lib_ID = $_POST['lib_ID'];
 		$name = $_POST['name'];
 		$departmentORcurriculum = $_POST['departmentORcurriculum'];
 		$user_type = $_POST['user_type'];
 
-		$UPDATE = "UPDATE lib_user SET lib_ID = ?, name = ?, departmentORcurriculum = ?, user_type = ? WHERE lib_ID = ? ";
+		$UPDATE = "UPDATE lib_user SET lib_ID = ?, name = ?, departmentORcurriculum = ?, user_type = ? WHERE id = ? ";
 		$stmt = $conn->prepare($UPDATE);
-		$stmt->bind_param('sssss', $lib_ID, $name, $departmentORcurriculum, $user_type, $lib_ID);
+		$stmt->bind_param('sssss', $lib_ID, $name, $departmentORcurriculum, $user_type, $id);
 
 		if($stmt->execute()){
 			// echo 'Record Updated';

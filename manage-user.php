@@ -49,7 +49,7 @@
 					<td class="p-3 border border-solid"><?php echo $row['departmentORcurriculum']; ?></td>
 					<td class="p-3 border border-solid"><?php echo $row['user_type']; ?></td>
 					<td class="p-3 flex justify-around border border-solid">	
-						<button><a class="hover:underline" href="add-user.php?lib_ID=<?php echo $row['lib_ID']; ?>&name=<?php echo $row['name'] ?>&deptCurr=<?php echo $row['departmentORcurriculum'] ?>&userType=<?php echo $row['user_type'] ?>">Edit</a></button>
+						<button><a class="hover:underline" href="add-user.php?lib_ID=<?php echo $row['lib_ID']; ?>&name=<?php echo $row['name'] ?>&deptCurr=<?php echo $row['departmentORcurriculum'] ?>&userType=<?php echo $row['user_type'] ?>&id=<?php echo $row['id']?>">Edit</a></button>
 						<button><a class="hover:underline" href="functions/actions.php?lib_ID=<?php echo $row['lib_ID']; ?>">Delete</a></button>
 					</td>
 				</tr>

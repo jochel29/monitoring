@@ -20,6 +20,7 @@
 		<div class="w-[500px] border border-solid p-5 rounded rounded-xl bg-sky-300/50">
 		<?php 
 		if(isset($_GET['lib_ID'])){
+			$id = $_GET['id'];
 			$lib_ID = $_GET['lib_ID'];
 			$name = $_GET['name'];
 			$deptCurr = $_GET['deptCurr'];
@@ -28,6 +29,7 @@
 			echo '
 				<form class="w-full flex flex-col gap-5 justify-center" action="functions/actions.php" method="POST">
 					<h1 class="font-bold text-2xl text-center">Add User</h1>
+				<input type="text" name="id" value="'.$id.'" hidden>
 				<input class="w-full border border-solid p-5 rounded rounded-full" placeholder="Library ID" type="text" name="lib_ID" value="'.$lib_ID.'" required>
 				<input class="w-full border border-solid p-5 rounded rounded-full" placeholder="Name" type="text" name="name" required value="'.$name.'">
 				
